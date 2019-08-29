@@ -1,5 +1,5 @@
 import { GraphQLServer } from 'graphql-yoga'
-import { prisma } from '../prisma/generated/prisma-client'
+import { prisma } from 'generated/prisma-client'
 import { authMiddleware } from './middlewares'
 import resolvers from './resolvers'
 

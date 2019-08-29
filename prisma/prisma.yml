@@ -7,7 +7,7 @@ datamodel: datamodel.prisma
 # Specifies the language and directory for the generated Prisma client.
 generate:
   - generator: typescript-client
-    output: ./generated/prisma-client/
+    output: ../src/generated/prisma-client/
 
 # Seed your service with initial data based on `seed.graphql`.
 seed:
