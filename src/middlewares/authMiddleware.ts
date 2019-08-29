@@ -1,5 +1,5 @@
 import * as jwt from 'jsonwebtoken'
-import { Context } from 'types'
+import { Context } from '../types'
 
 const authMiddleware = async (resolve, parent, args, ctx: Context) => {
   const authHeaderValue = ctx.request.get('Authorization')

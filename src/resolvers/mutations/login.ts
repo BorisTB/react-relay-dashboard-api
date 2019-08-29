@@ -1,6 +1,6 @@
 import * as bcrypt from 'bcryptjs'
 import * as jwt from 'jsonwebtoken'
-import { Context } from 'types'
+import { Context } from '../../types'
 
 const login = async (parent, { email, password }, ctx: Context) => {
   const user = await ctx.db.user({ email })
