@@ -6,4 +6,3 @@ node_modules
 .vscode
 *.log
 .env
-now.json

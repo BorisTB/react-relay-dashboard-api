@@ -6,6 +6,9 @@
     "build": "rimraf public && tsc",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose --project ."
   },
+  "engines": {
+    "node": "10.x"
+  },
   "dependencies": {
     "bcryptjs": "2.4.3",
     "graphql-yoga": "1.18.3",
