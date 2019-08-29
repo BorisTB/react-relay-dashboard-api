@@ -1,16 +1,15 @@
 {
   "name": "react-relay-dashboard-api",
   "scripts": {
+    "copy:schema": "copyfiles -f src/schema.graphql public",
     "start": "NODE_PATH=./src dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
     "debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
-    "build": "rimraf public && tsc",
+    "build": "rimraf public && tsc && npm run copy:schema",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose --project ."
-  },
-  "engines": {
-    "node": "10.x"
   },
   "dependencies": {
     "bcryptjs": "2.4.3",
+    "graphql-import-node": "^0.0.4",
     "graphql-yoga": "1.18.3",
     "jsonwebtoken": "8.5.1",
     "prisma-client-lib": "^1.34.7"
@@ -18,6 +17,7 @@
   "devDependencies": {
     "@types/bcryptjs": "2.4.2",
     "@types/node": "10.14.16",
+    "copyfiles": "^2.1.1",
     "dotenv-cli": "1.4.0",
     "graphql-cli": "^3.0.14",
     "nodemon": "1.19.1",

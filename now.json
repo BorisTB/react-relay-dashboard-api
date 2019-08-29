@@ -7,7 +7,7 @@
     "PRISMA_SECRET": "@prisma-secret"
   },
   "builds": [
-    { "src": "src/index.ts", "use": "@now/node-server" }
+    { "src": "src/index.ts", "use": "@now/node" }
   ],
   "routes": [
     { "src": "/graphql", "dest": "src/index.ts" }
