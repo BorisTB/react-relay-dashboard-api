@@ -3,7 +3,7 @@
   "scripts": {
     "start": "NODE_PATH=./src dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
     "debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
-    "build": "rimraf dist && tsc",
+    "build": "rimraf public && tsc",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose --project ."
   },
   "dependencies": {
