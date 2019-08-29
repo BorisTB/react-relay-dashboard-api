@@ -1,10 +1,16 @@
 {
   "version": 2,
   "name": "react-relay-dashboard-api",
+  "env": {
+    "APP_SECRET": "@app-secret",
+    "PRISMA_ENDPOINT": "@prisma-endpoint",
+    "PRISMA_SECRET": "@prisma-secret"
+  },
   "builds": [
-    { "src": "index.js", "use": "@now/node" }
+    { "src": "package.json", "use": "@now/static-build" },
+    { "src": "public/*", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "index.js" }
+    { "src": "/graphql", "dest": "public/index.js" }
   ]
 }
