@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "react-relay-dashboard-api",
-  "alias": ["https://relay-dashboard-api.now.sh/"],
+  "alias": ["relay-dashboard-api.now.sh"],
   "env": {
     "APP_SECRET": "@app-secret",
     "PRISMA_ENDPOINT": "@prisma-endpoint",
