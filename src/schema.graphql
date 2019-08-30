@@ -23,7 +23,12 @@ type Mutation {
   upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
   updateManyUsers(data: UserUpdateManyMutationInput!, where: UserWhereInput): BatchPayload!
   deleteManyUsers(where: UserWhereInput): BatchPayload!
-  login(email: String!, password: String!): LoginPayload!
+  login(data: LoginInput!): LoginPayload!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
 }
 
 type LoginPayload {
