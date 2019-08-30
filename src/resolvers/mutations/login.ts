@@ -2,7 +2,7 @@ import * as bcrypt from 'bcryptjs'
 import * as jwt from 'jsonwebtoken'
 import { Context } from '../../types'
 
-const login = async (parent, { email, password }, ctx: Context) => {
+const login = async (parent, { data: { email, password } }, ctx: Context) => {
   const user = await ctx.db.user({ email })
   if (!user) {
     throw new Error(`No such user found for email: ${email}`)
