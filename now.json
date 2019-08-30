@@ -10,6 +10,7 @@
     { "src": "src/index.ts", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/graphql", "dest": "src/index.ts" }
+    { "src": "/graphql", "dest": "src/index.ts" },
+    { "src": "/(.*)", "status": 301, "headers": { "Location": "http://relay-dashboard.now.sh" }}
   ]
 }
